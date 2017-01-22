@@ -14,7 +14,9 @@
     {{ post_template.render(page) }}
 
     <div class="post-spread">
-      {% if theme.jiathis %}
+      {% if theme.share %}
+        {% include '_partials/share/share.swig' %}
+      {% elseif theme.jiathis %}
         {% include '_partials/share/jiathis.swig' %}
       {% elseif theme.baidushare %}
         {% include '_partials/share/baidushare.swig' %}
